@@ -9,10 +9,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-/**
- * Created by saacsos on 1/12/2559.
- * http://zetcode.com/tutorials/javagamestutorial/tetris/
- */
 public class JustinView extends TetrisBoard {
     private final int BOARD_WIDTH = 10;
     private final int BOARD_HEIGHT = 22;
@@ -24,7 +20,7 @@ public class JustinView extends TetrisBoard {
     JustinView(TetrisFrame parent) {
     	parent.setBoard(1);
         setFocusable(true);
-        setBackground(Color.black);
+        setBackground(Color.yellow);
         controller = new BoardController(BOARD_WIDTH, BOARD_HEIGHT, this);
         statusBar = parent.getStatusBar();
         addKeyListener(new TAdapter());
@@ -50,10 +46,10 @@ public class JustinView extends TetrisBoard {
 
     public void drawSquare(Graphics g, int x, int y, tetris.models.Shape.Tetrominoes shape)
     {
-        Color colors[] = { new Color(0, 0, 0), new Color(204, 102, 102),
-                new Color(102, 204, 102), new Color(102, 102, 204),
-                new Color(204, 204, 102), new Color(204, 102, 204),
-                new Color(102, 204, 204), new Color(218, 170, 0)
+        Color colors[] = { new Color(255, 255, 171), new Color(255, 255, 171), 
+            new Color(255, 255, 171), new Color(255, 255, 171), 
+            new Color(255, 255, 171), new Color(255, 255, 171), 
+            new Color(255, 255, 171), new Color(255, 255, 171), 
         };
 
 

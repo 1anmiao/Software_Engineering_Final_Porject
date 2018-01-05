@@ -6,10 +6,6 @@ import tetris.views.TetrisBoard;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by saacsos on 1/12/2559.
- * http://zetcode.com/tutorials/javagamestutorial/tetris/
- */
 public class BoardController {
     private TetrisBoard tetrisBoard;
     private int boardWidth;

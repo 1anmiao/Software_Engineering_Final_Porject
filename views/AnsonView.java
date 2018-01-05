@@ -9,10 +9,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
-/**
- * Created by saacsos on 1/12/2559.
- * http://zetcode.com/tutorials/javagamestutorial/tetris/
- */
 public class AnsonView extends TetrisBoard {
     private final int BOARD_WIDTH = 20;
     private final int BOARD_HEIGHT = 44;

@@ -2,10 +2,6 @@ package tetris.views;
 import javax.swing.*;
 import java.awt.*;
 
-/**
- * Created by saacsos on 1/12/2559.
- * http://zetcode.com/tutorials/javagamestutorial/tetris/
- */
 public class TetrisFrame extends JFrame {
     private JLabel statusBar;
     private TetrisBoard board;
@@ -21,6 +17,9 @@ public class TetrisFrame extends JFrame {
     public TetrisFrame() {
         statusBar = new JLabel(" 0");
         board = new AnsonView(this);
+        //board = new JustinView(this);
+        //board = new NeilnView(this);
+        //board = new EGView(this);
     }
 
     public void init() {
