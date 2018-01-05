@@ -36,6 +36,13 @@ public class JustinView extends TetrisBoard {
     }
 
     public void paint(Graphics g) {
+    	Graphics2D g2d = (Graphics2D) g;        
+        if (isOpaque()) {
+            Graphics dc = g2d.create();
+            dc.setColor(getBackground());
+            dc.fillRect(0, 0, getWidth(), getHeight());
+            dc.dispose();
+        }
         super.paint(g);
         controller.paint(g, getSize().getWidth(), getSize().getHeight());
 
