@@ -8,18 +8,18 @@ import java.awt.*;
  */
 public class TetrisFrame extends JFrame {
     private JLabel statusBar;
-    private JPanel board;
+    private TetrisBoard board;
 
     public TetrisFrame() {
         statusBar = new JLabel(" 0");
-        board = new TetrisBoard(this);
+        board = new JustinView(this);
     }
 
     public void init() {
         setLayout(new BorderLayout());
         add(statusBar, BorderLayout.SOUTH);
         add(board, BorderLayout.CENTER);
-        ((TetrisBoard) board).start();
+        board.start();
         setSize(200, 400);
         setPreferredSize(new Dimension(200, 400));
         setTitle("Tetris");
