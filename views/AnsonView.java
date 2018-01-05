@@ -24,6 +24,7 @@ public class AnsonView extends TetrisBoard {
     AnsonView(TetrisFrame parent) {
         parent.setBoard(2);
         setFocusable(true);
+        setBackground(Color.black);
         controller = new BoardController(BOARD_WIDTH, BOARD_HEIGHT, this);
         statusBar = parent.getStatusBar();
         addKeyListener(new TAdapter());
@@ -49,10 +50,7 @@ public class AnsonView extends TetrisBoard {
 
     public void drawSquare(Graphics g, int x, int y, tetris.models.Shape.Tetrominoes shape)
     {
-        Color colors[] = { new Color(0, 0, 0), new Color(204, 102, 102),
-                new Color(102, 204, 102), new Color(102, 102, 204),
-                new Color(204, 204, 102), new Color(204, 102, 204),
-                new Color(102, 204, 204), new Color(218, 170, 0)
+        Color colors[] = { new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50)
         };
 
 
