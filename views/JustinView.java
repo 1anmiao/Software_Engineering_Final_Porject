@@ -22,7 +22,9 @@ public class JustinView extends TetrisBoard {
 
 
     JustinView(TetrisFrame parent) {
+    	parent.setBoard(1);
         setFocusable(true);
+        setBackground(Color.black);
         controller = new BoardController(BOARD_WIDTH, BOARD_HEIGHT, this);
         statusBar = parent.getStatusBar();
         addKeyListener(new TAdapter());
