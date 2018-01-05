@@ -46,7 +46,7 @@ public class AnsonView extends TetrisBoard {
 
     public void drawSquare(Graphics g, int x, int y, tetris.models.Shape.Tetrominoes shape)
     {
-        Color colors[] = { new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50), new Color(50, 50, 50)
+        Color colors[] = { new Color(30, 30, 30), new Color(60, 60, 60), new Color(90, 90, 90), new Color(120, 120, 120), new Color(150, 150, 150), new Color(180, 180, 180), new Color(210, 210, 210), new Color(240, 240, 240)
         };
 
 
