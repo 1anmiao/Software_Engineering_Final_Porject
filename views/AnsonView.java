@@ -19,8 +19,9 @@ public class AnsonView extends TetrisBoard {
 
     AnsonView(TetrisFrame parent) {
         parent.setBoard(2);
+        setOpaque(false);
         setFocusable(true);
-        setBackground(Color.black);
+        parent.getContentPane().setBackground(Color.black);
         controller = new BoardController(BOARD_WIDTH, BOARD_HEIGHT, this);
         statusBar = parent.getStatusBar();
         addKeyListener(new TAdapter());
