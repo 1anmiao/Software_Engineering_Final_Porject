@@ -138,16 +138,23 @@ public class BoardController {
         }
     }
 
-    private void newPiece()
+    //@SuppressWarnings("null")
+	private void newPiece()
     {
         currentPiece.setRandomShape();
         currentX = boardWidth / 2 + 1;
         currentY = boardHeight - 1 + currentPiece.minY();
-
+        //
+        JDialog f = new JDialog();
+        //
         if (!tryMove(currentPiece, currentX, currentY)) {
             currentPiece.setPieceShape(Shape.Tetrominoes.NoShape);
             timer.stop();
             isStarted = false;
+            //
+            JOptionPane.showMessageDialog(f,"you've removed "+numLinesRemoved+" lines.",
+                    "GameOver.", JOptionPane.INFORMATION_MESSAGE);
+            //
             tetrisBoard.setStatusText("game over, you've removed "+numLinesRemoved+" lines.");
         }
     }
