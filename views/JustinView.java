@@ -19,8 +19,9 @@ public class JustinView extends TetrisBoard {
 
     JustinView(TetrisFrame parent) {
     	parent.setBoard(1);
+    	setOpaque(false);
         setFocusable(true);
-        setBackground(Color.yellow);
+        parent.getContentPane().setBackground(Color.pink);
         controller = new BoardController(BOARD_WIDTH, BOARD_HEIGHT, this);
         statusBar = parent.getStatusBar();
         addKeyListener(new TAdapter());
@@ -36,13 +37,6 @@ public class JustinView extends TetrisBoard {
     }
 
     public void paint(Graphics g) {
-    	Graphics2D g2d = (Graphics2D) g;        
-        if (isOpaque()) {
-            Graphics dc = g2d.create();
-            dc.setColor(getBackground());
-            dc.fillRect(0, 0, getWidth(), getHeight());
-            dc.dispose();
-        }
         super.paint(g);
         controller.paint(g, getSize().getWidth(), getSize().getHeight());
 
@@ -53,10 +47,10 @@ public class JustinView extends TetrisBoard {
 
     public void drawSquare(Graphics g, int x, int y, tetris.models.Shape.Tetrominoes shape)
     {
-        Color colors[] = { new Color(255, 255, 171), new Color(255, 255, 171), 
-            new Color(255, 255, 171), new Color(255, 255, 171), 
-            new Color(255, 255, 171), new Color(255, 255, 171), 
-            new Color(255, 255, 171), new Color(255, 255, 171), 
+        Color colors[] = { new Color(153, 153, 255), new Color(153, 153, 255), 
+            new Color(153, 153, 255), new Color(153, 153, 255), 
+            new Color(153, 153, 255), new Color(153, 153, 255), 
+            new Color(153, 153, 255), new Color(153, 153, 255), 
         };
 
 
