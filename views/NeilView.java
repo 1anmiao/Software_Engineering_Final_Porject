@@ -17,14 +17,13 @@ public class NeilView extends TetrisBoard {
     private final int BOARD_WIDTH = 10;
     private final int BOARD_HEIGHT = 22;
     private JLabel statusBar;
-
     private BoardController controller;
 
 
     NeilView(TetrisFrame parent) {
     	parent.setBoard(1);
     	setOpaque(false);
-    	parent.getContentPane().setBackground(Color.BLACK);
+    	parent.getContentPane().setBackground(Color.getHSBColor(20, 100, 100));
     	setFocusable(true);
         controller = new BoardController(BOARD_WIDTH, BOARD_HEIGHT, this);
         statusBar = parent.getStatusBar();
@@ -51,10 +50,10 @@ public class NeilView extends TetrisBoard {
 
     public void drawSquare(Graphics g, int x, int y, tetris.models.Shape.Tetrominoes shape)
     {
-        Color colors[] = { new Color(255, 255, 255), new Color(240, 102, 102),
-                new Color(240, 102, 102), new Color(170, 170, 170),
-                new Color(240, 102, 102), new Color(170, 170, 170),
-                new Color(170, 170, 170), new Color(170, 170, 170)
+        Color colors[] = { new Color(255, 255, 255), new Color(240, 100, 100),
+                new Color(240, 160, 160), new Color(170, 170, 170),
+                new Color(240, 130, 130), new Color(150, 150, 150),
+                new Color(250, 250, 250), new Color(220, 220, 220)
         };
 
 
