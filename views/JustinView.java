@@ -47,10 +47,10 @@ public class JustinView extends TetrisBoard {
 
     public void drawSquare(Graphics g, int x, int y, tetris.models.Shape.Tetrominoes shape)
     {
-        Color colors[] = { new Color(153, 153, 255), new Color(153, 153, 255), 
-            new Color(153, 153, 255), new Color(153, 153, 255), 
-            new Color(153, 153, 255), new Color(153, 153, 255), 
-            new Color(153, 153, 255), new Color(153, 153, 255), 
+        Color colors[] = { new Color(181, 255, 255), new Color(224, 181, 255), 
+            new Color(200, 200, 255), new Color(230, 230, 255), 
+            new Color(255, 212, 212), new Color(255, 255, 171), 
+            new Color(255, 229, 181), new Color(171, 255, 255), 
         };
 
 
