@@ -23,7 +23,8 @@ public class NeilView extends TetrisBoard {
 
     NeilView(TetrisFrame parent) {
     	parent.setBoard(1);
-        setBackground(Color.BLACK);
+    	setOpaque(false);
+    	parent.getContentPane().setBackground(Color.BLACK);
     	setFocusable(true);
         controller = new BoardController(BOARD_WIDTH, BOARD_HEIGHT, this);
         statusBar = parent.getStatusBar();
