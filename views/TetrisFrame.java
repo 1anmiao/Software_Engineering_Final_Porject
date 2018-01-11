@@ -74,6 +74,9 @@ public class TetrisFrame extends JFrame {
  	     }
     
     public void init() {
+    	JDialog f = new JDialog();
+    	JOptionPane.showMessageDialog(f,"Start.",
+                "Welcome to Tetris.", JOptionPane.INFORMATION_MESSAGE);
         setLayout(new BorderLayout());
         add(statusBar, BorderLayout.SOUTH);
         add(board, BorderLayout.CENTER);
