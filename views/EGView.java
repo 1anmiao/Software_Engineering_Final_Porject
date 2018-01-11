@@ -9,23 +9,32 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
+//***************************
+
+//**************************
 public class EGView extends TetrisBoard {
-    private final int BOARD_WIDTH = 10;
-    private final int BOARD_HEIGHT = 22;
+    private final int BOARD_WIDTH = 5;
+    private final int BOARD_HEIGHT = 10;
     private JLabel statusBar;
 
     private BoardController controller;
 
 
     EGView(TetrisFrame parent) {
+    	
     	parent.setBoard(1);
         setFocusable(true);
-        setBackground(Color.yellow);
+        setOpaque(false);
+        parent.getContentPane().setBackground(Color.ORANGE);
+        //setBackground(Color.gray);
         controller = new BoardController(BOARD_WIDTH, BOARD_HEIGHT, this);
         statusBar = parent.getStatusBar();
         addKeyListener(new TAdapter());
+        
     }
-
+    
+   
+    
     void start() {
         controller.start();
     }
@@ -46,10 +55,10 @@ public class EGView extends TetrisBoard {
 
     public void drawSquare(Graphics g, int x, int y, tetris.models.Shape.Tetrominoes shape)
     {
-        Color colors[] = { new Color(255, 255, 171), new Color(255, 255, 171), 
+        Color colors[] = { new Color(255, 200, 171), new Color(100, 255, 171), 
+            new Color(255, 255, 171), new Color(255, 100, 171), 
             new Color(255, 255, 171), new Color(255, 255, 171), 
-            new Color(255, 255, 171), new Color(255, 255, 171), 
-            new Color(255, 255, 171), new Color(255, 255, 171), 
+            new Color(255, 255, 171), new Color(255, 255, 55), 
         };
 
 
@@ -116,5 +125,7 @@ public class EGView extends TetrisBoard {
 
         }
     }
+    
+    
 }
 
