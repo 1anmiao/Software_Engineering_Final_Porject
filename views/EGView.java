@@ -101,24 +101,32 @@ public class EGView extends TetrisBoard {
 
             switch (keycode) {
                 case KeyEvent.VK_LEFT:
+                case 'a':
+                case 'A':
                     controller.moveLeft();
                     break;
                 case KeyEvent.VK_RIGHT:
+                case 'd':
+                case 'D':
                     controller.moveRight();
                     break;
                 case KeyEvent.VK_DOWN:
+                case 's':
+                case 'S':
                     controller.rotateRight();
                     break;
                 case KeyEvent.VK_UP:
+                case 'w':
+                case 'W':
                     controller.rotateLeft();
                     break;
                 case KeyEvent.VK_SPACE:
                     controller.dropDown();
                     break;
-                case 'd':
+                case 'x':
                     controller.oneLineDown();
                     break;
-                case 'D':
+                case 'X':
                     controller.oneLineDown();
                     break;
             }
