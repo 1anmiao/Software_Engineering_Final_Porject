@@ -41,16 +41,15 @@ public class TetrisFrame extends JFrame {
     	 Image image2 = null;
     	 Image image3 = null;
  	    try {
- 	        // Read from a file
- 	        File sourceimage1 = new File("image/up.jpg");  
+ 	       
  	       File sourceimage2 = new File("image/east.jpg");
  	      File sourceimage3 = new File("image/west.jpg");
- 	        image1 = ImageIO.read(sourceimage1);
+ 	      
  	       image2 = ImageIO.read(sourceimage2);
  	      image3 = ImageIO.read(sourceimage3);
- 	        // Read from an input stream
+ 	       
  	        InputStream is = new BufferedInputStream(new FileInputStream("C:\\Users\\joe85\\Downloads\\3.jpg"));  
- 	       // image = ImageIO.read(is);
+ 	      
  	    
  	        // Read from a URL
  	        URL url = new URL("https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=278194393,1455705492&fm=27&gp=0.jpg");
@@ -59,17 +58,15 @@ public class TetrisFrame extends JFrame {
  	    	e.printStackTrace();
  	    }
  	    
- 	    // Use a label to display the image
- 	    //JFrame frame = new JFrame();
- 	    JLabel label1 = new JLabel(new ImageIcon(image1));
+ 	   
  	   JLabel label2 = new JLabel(new ImageIcon(image2));
  	  JLabel label3 = new JLabel(new ImageIcon(image3));
- 	    this.getContentPane().add(label1, BorderLayout.NORTH);
+ 	  
  	   this.getContentPane().add(label2, BorderLayout.EAST);
  	  this.getContentPane().add(label3, BorderLayout.WEST);
  	    this.pack();
  	    this.setVisible(true); 
- 	    //关闭窗口--退出调试
+ 	    
  	     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  	     }
     
